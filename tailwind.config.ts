@@ -1,10 +1,15 @@
 
-import { type Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -14,7 +19,18 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ["Montserrat", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+      },
       colors: {
+        loft: {
+          black: "#161616",
+          gray: "#212121",
+          light: "#f5f5f5",
+          green: "#2F8C46", // изменено с loft-red на loft-green
+          white: "#FFFFFF",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -51,18 +67,11 @@ export default {
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          ring: "hsl(var(--sidebar-ring))",
         },
-        loft: {
-          black: "#161616",
-          gray: "#212121",
-          red: "#D91C1C",
-          wood: "#8B5A2B",
-          light: "#F5F5F5",
-        },
-      },
-      fontFamily: {
-        sans: ["Inter var", ...fontFamily.sans],
-        heading: ["Oswald", ...fontFamily.sans],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -79,26 +88,23 @@ export default {
           to: { height: "0" },
         },
         fadeIn: {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         slideUp: {
           "0%": { transform: "translateY(20px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
-        scaleIn: {
-          "0%": { transform: "scale(0.95)", opacity: "0" },
-          "100%": { transform: "scale(1)", opacity: "1" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        fadeIn: "fadeIn 0.5s ease-out forwards",
-        slideUp: "slideUp 0.6s ease-out forwards",
-        scaleIn: "scaleIn 0.4s ease-out forwards",
+        fadeIn: "fadeIn 1s ease-in-out forwards",
+        slideUp: "slideUp 0.7s ease-out forwards",
       },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-} satisfies Config;
+};
+
+export default config;
