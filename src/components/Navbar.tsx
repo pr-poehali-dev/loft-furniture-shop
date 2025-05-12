@@ -38,7 +38,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.name}
-                href={link.href}
+                href={link.href.startsWith("#") ? link.href : link.href}
                 className="text-sm font-medium text-white hover:text-loft-green transition-colors duration-200 animated-underline"
               >
                 {link.name}
@@ -55,9 +55,11 @@ const Navbar = () => {
               <span className="text-sm">8 (981) 947-40-96</span>
             </a>
 
-            <Button className="bg-loft-green hover:bg-loft-green/90 text-white rounded-sm hidden md:flex">
-              Каталог
-            </Button>
+            <a href="/catalog">
+              <Button className="bg-loft-green hover:bg-loft-green/90 text-white rounded-sm hidden md:flex">
+                Каталог
+              </Button>
+            </a>
 
             {/* Mobile menu */}
             <Sheet>

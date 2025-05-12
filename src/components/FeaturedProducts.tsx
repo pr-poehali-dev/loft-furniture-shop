@@ -43,6 +43,46 @@ const products = [
     isNew: false,
     isBestseller: true,
   },
+  {
+    id: 5,
+    name: "Светильник ИНДАСТРИ",
+    category: "Освещение",
+    price: 7900,
+    image:
+      "https://cdn.poehali.dev/files/e07b3546-da60-41c7-acb2-e2dd8bdb3804.jpg",
+    isNew: true,
+    isBestseller: false,
+  },
+  {
+    id: 6,
+    name: "Консоль ЛОФТ",
+    category: "Столы",
+    price: 21500,
+    image:
+      "https://images.unsplash.com/photo-1532372576444-dda954194ad0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bG9mdCUyMGNvbnNvbGUlMjB0YWJsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    isNew: false,
+    isBestseller: true,
+  },
+  {
+    id: 7,
+    name: "Кофейный столик БЭНК",
+    category: "Столы",
+    price: 15800,
+    image:
+      "https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwdGFibGUlMjBsb2Z0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    isNew: false,
+    isBestseller: false,
+  },
+  {
+    id: 8,
+    name: "Барный стул ХАЙТЕК",
+    category: "Стулья",
+    price: 9800,
+    image:
+      "https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFyJTIwc3Rvb2x8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+    isNew: false,
+    isBestseller: false,
+  },
 ];
 
 const FeaturedProducts = () => {

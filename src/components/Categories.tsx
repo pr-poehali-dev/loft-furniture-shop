@@ -28,14 +28,14 @@ const categories = [
     id: "lighting",
     name: "Освещение",
     image:
-      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=1000",
+      "https://cdn.poehali.dev/files/e07b3546-da60-41c7-acb2-e2dd8bdb3804.jpg",
     description: "Оригинальные светильники для создания атмосферы",
   },
   {
     id: "outdoor",
     name: "Уличная мебель",
     image:
-      "https://cdn.poehali.dev/files/f4c167fe-9cf6-4938-a098-881d48e6f1e6.jpg",
+      "https://cdn.poehali.dev/files/99dcc569-ecea-45fb-b73a-b2c56ac13b11.jpg",
     description: "Мебель для террас, патио и открытых пространств",
   },
   {

@@ -34,10 +34,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-loft-green hover:bg-loft-green/90 text-white px-8 py-6 rounded-sm font-medium text-lg">
-              Каталог
-              <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
-            </Button>
+            <a href="/catalog">
+              <Button className="bg-loft-green hover:bg-loft-green/90 text-white px-8 py-6 rounded-sm font-medium text-lg">
+                Каталог
+                <Icon name="ArrowRight" className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
 
             <Button
               variant="outline"
